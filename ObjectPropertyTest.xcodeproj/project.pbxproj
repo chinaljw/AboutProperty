@@ -20,6 +20,7 @@
 		728C784C1BA4733B00A6628E /* Sub_3_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C784B1BA4733B00A6628E /* Sub_3_Class.m */; };
 		728C784F1BA4734A00A6628E /* Sub_4_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C784E1BA4734A00A6628E /* Sub_4_Class.m */; };
 		728C78531BA53A4A00A6628E /* NSObject+AboutProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78521BA53A4A00A6628E /* NSObject+AboutProperty.m */; };
+		728C78561BA5B73200A6628E /* TestObject+TestAssociateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78551BA5B73200A6628E /* TestObject+TestAssociateObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		728C784E1BA4734A00A6628E /* Sub_4_Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub_4_Class.m; sourceTree = "<group>"; };
 		728C78511BA53A4A00A6628E /* NSObject+AboutProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AboutProperty.h"; sourceTree = "<group>"; };
 		728C78521BA53A4A00A6628E /* NSObject+AboutProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AboutProperty.m"; sourceTree = "<group>"; };
+		728C78541BA5B73200A6628E /* TestObject+TestAssociateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestObject+TestAssociateObject.h"; sourceTree = "<group>"; };
+		728C78551BA5B73200A6628E /* TestObject+TestAssociateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestObject+TestAssociateObject.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				728C781D1BA4680000A6628E /* AppDelegate.m */,
 				728C781F1BA4680000A6628E /* ViewController.h */,
 				728C78201BA4680000A6628E /* ViewController.m */,
+				728C78541BA5B73200A6628E /* TestObject+TestAssociateObject.h */,
+				728C78551BA5B73200A6628E /* TestObject+TestAssociateObject.m */,
 				728C78411BA46AE400A6628E /* TestObject.h */,
 				728C78421BA46AE400A6628E /* TestObject.m */,
 				728C78441BA46B5100A6628E /* TestObjectSubClass.h */,
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				728C78211BA4680000A6628E /* ViewController.m in Sources */,
+				728C78561BA5B73200A6628E /* TestObject+TestAssociateObject.m in Sources */,
 				728C784C1BA4733B00A6628E /* Sub_3_Class.m in Sources */,
 				728C781E1BA4680000A6628E /* AppDelegate.m in Sources */,
 				728C78431BA46AE400A6628E /* TestObject.m in Sources */,

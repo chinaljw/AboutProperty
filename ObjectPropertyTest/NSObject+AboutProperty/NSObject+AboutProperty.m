@@ -77,23 +77,23 @@
     return propertyList;
 }
 
-- (NSDictionary *)selfKeyValues
+- (NSDictionary *)selfPropertyKeyValues
 {
     return [self keyValuesWithPropertyList:[self selfPropertyList] shouldAddNilProperty:YES];
 }
 
-- (NSDictionary *)selfKeyValues_removeNilObject
+- (NSDictionary *)selfPropertyKeyValues_removeNilObject
 {
     return [self keyValuesWithPropertyList:[self selfPropertyList] shouldAddNilProperty:NO];
 }
 
-- (NSDictionary *)keyValuesIncludeSuperClassAndWithOutNSObject
+- (NSDictionary *)propertyKeyValuesIncludeSuperClassAndWithOutNSObject
 {
     return [self keyValuesWithPropertyList:[self propertyListIncludeSuperClassAndWithOutNSObject] shouldAddNilProperty:YES];
     
 }
 
-- (NSDictionary *)keyValuesIncludeSuperClassAndWithOutNSObject_removeNilObject
+- (NSDictionary *)propertykeyValuesIncludeSuperClassAndWithOutNSObject_removeNilObject
 {
     return [self keyValuesWithPropertyList:[self propertyListIncludeSuperClassAndWithOutNSObject] shouldAddNilProperty:NO];
 }
@@ -154,7 +154,7 @@
 
 - (NSString *)getShortPropertyTypeFromFullPropertyType:(NSString *)fullPropertyType
 {
-
+    //OC对象
     if ([fullPropertyType rangeOfString:@"T@"].location != NSNotFound) {
         NSArray *component = [fullPropertyType componentsSeparatedByString:@"\""];
         if (component.count == 1) {
@@ -162,6 +162,7 @@
         }
         return component[1];
     }
+    //基本数据类型和C类型
     else
     {
         //基本数据类型键值对可以自己添加,不过感觉也差不多了。。。
@@ -177,32 +178,37 @@
                                       @"s":@"short",
                                       @"c":@"char",
                                       @"f":@"float",
+                                      //CGRect
+                                      @"{CGRect={CGPoint=dd}{CGSize=dd}}":@"CGRect",
+                                      //CGPoint
+                                      @"{CGPoint=dd}":@"CGPoint",
+                                      //CGSize
+                                      @"{CGSize=dd}":@"CGSize",
+                                      //结构体指针
+                                      @"{CGRect}":@"CGRect",
+                                      @"{CGPoint}":@"CGPoint",
+                                      @"{CGSize}":@"CGSize",
                                       };
 
         });
         
         NSString *originTypeString = [fullPropertyType componentsSeparatedByString:@","].firstObject;
         
-        NSString *typeKey = [NSString stringWithFormat:@"%c", [originTypeString characterAtIndex:originTypeString.length - 1]];
+        NSString *usefullTypeString = [originTypeString substringFromIndex:1];
+        
+        NSString *typeKey = [usefullTypeString stringByReplacingOccurrencesOfString:@"^" withString:@""];
+        
+        NSString *pointerString = [usefullTypeString stringByReplacingOccurrencesOfString:typeKey withString:@""];
+        pointerString = [pointerString stringByReplacingOccurrencesOfString:@"^" withString:@"*"];
         
         NSString *typeValue = baseDataTypeKeyValues[typeKey];
         
         if (!typeValue) {
             return originTypeString;
         }
-        
-        if (originTypeString.length == 2) {
-            return typeValue;
-        }
-        else if (originTypeString.length > 2)
-        {
-            NSString *pointerString = [originTypeString substringWithRange:NSMakeRange(1, originTypeString.length - 2)];
-            pointerString = [pointerString stringByReplacingOccurrencesOfString:@"^" withString:@"*"];
-            return [pointerString stringByAppendingString:typeValue];
-        }
         else
         {
-            return originTypeString;
+            return [pointerString stringByAppendingString:typeValue];
         }
     }
 }

@@ -21,13 +21,13 @@
 
 - (NSArray *)propertyListIncludeSuperClassAndWithOutNSObject;
 
-- (NSDictionary *)selfKeyValues;
+- (NSDictionary *)selfPropertyKeyValues;
 
-- (NSDictionary *)selfKeyValues_removeNilObject;
+- (NSDictionary *)selfPropertyKeyValues_removeNilObject;
 
-- (NSDictionary *)keyValuesIncludeSuperClassAndWithOutNSObject;
+- (NSDictionary *)propertyKeyValuesIncludeSuperClassAndWithOutNSObject;
 
-- (NSDictionary *)keyValuesIncludeSuperClassAndWithOutNSObject_removeNilObject;
+- (NSDictionary *)propertykeyValuesIncludeSuperClassAndWithOutNSObject_removeNilObject;
 
 @end
 
