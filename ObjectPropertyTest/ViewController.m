@@ -35,7 +35,7 @@
     
     testObject.sub_4 = sub_4_Object;
     
-    NSLog(@"%@", sub_4_Object.keyValuesIncludeSuperClassAndWithOutNSObject);
+    NSLog(@"%@", sub_4_Object.propertyListIncludeSuperClassAndWithOutNSObject);
 }
 
 - (void)didReceiveMemoryWarning {

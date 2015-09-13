@@ -46,7 +46,7 @@
     return nil;
 }
 
-#pragma mark - Userfull
+#pragma mark - Usefull
 - (NSArray *)superClassChain
 {
     return [self getClassSuperClassChain:self.class];
@@ -229,7 +229,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"ObjectPropertyInfoDescription : name = %@, type = %@", self.propertyName, self.propertyType];
+    return [NSString stringWithFormat:@"ObjectPropertyInfoDescription : name = %@, type = %@ fullType = %@", self.propertyName, self.propertyType, self.propertyType_Full];
 }
 
 @end

@@ -8,6 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+
+typedef struct TestStruck
+{
+    char *name;
+    int age;
+}TestStruck;
+
+typedef NS_ENUM(NSInteger, TestNSENUM)
+{
+    TestNSENUMFirstValue = 0,
+    TestNSENUMSecondValue = 1,
+};
+
+typedef enum
+{
+    TestEnumFirstValue = 0,
+    TestEnumSecondValue = 1,
+}TestEnum;
 
 @class Sub_4_Class;
 @interface TestObject : NSObject
@@ -57,5 +76,13 @@
 @property (nonatomic, strong) Sub_4_Class *sub_4;
 
 @property (nonatomic, weak) id delegate;
+
+@property (nonatomic, assign) objc_property_t property;
+
+@property (nonatomic, assign) TestStruck testStruct;
+
+@property (nonatomic, assign) TestNSENUM testNSENUM;
+
+@property (nonatomic, assign) TestEnum testEnum;
 
 @end
