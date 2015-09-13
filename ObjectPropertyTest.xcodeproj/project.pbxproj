@@ -14,12 +14,12 @@
 		728C78261BA4680000A6628E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728C78251BA4680000A6628E /* Images.xcassets */; };
 		728C78291BA4680000A6628E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728C78271BA4680000A6628E /* LaunchScreen.xib */; };
 		728C78351BA4680000A6628E /* ObjectPropertyTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78341BA4680000A6628E /* ObjectPropertyTestTests.m */; };
-		728C78401BA4682400A6628E /* NSObject+AboutProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C783F1BA4682400A6628E /* NSObject+AboutProperty.m */; };
 		728C78431BA46AE400A6628E /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78421BA46AE400A6628E /* TestObject.m */; };
 		728C78461BA46B5100A6628E /* TestObjectSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78451BA46B5100A6628E /* TestObjectSubClass.m */; };
 		728C78491BA4732F00A6628E /* Sub_2_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78481BA4732F00A6628E /* Sub_2_Class.m */; };
 		728C784C1BA4733B00A6628E /* Sub_3_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C784B1BA4733B00A6628E /* Sub_3_Class.m */; };
 		728C784F1BA4734A00A6628E /* Sub_4_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C784E1BA4734A00A6628E /* Sub_4_Class.m */; };
+		728C78531BA53A4A00A6628E /* NSObject+AboutProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 728C78521BA53A4A00A6628E /* NSObject+AboutProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,6 @@
 		728C782E1BA4680000A6628E /* ObjectPropertyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectPropertyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728C78331BA4680000A6628E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		728C78341BA4680000A6628E /* ObjectPropertyTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectPropertyTestTests.m; sourceTree = "<group>"; };
-		728C783E1BA4682400A6628E /* NSObject+AboutProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AboutProperty.h"; sourceTree = "<group>"; };
-		728C783F1BA4682400A6628E /* NSObject+AboutProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AboutProperty.m"; sourceTree = "<group>"; };
 		728C78411BA46AE400A6628E /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		728C78421BA46AE400A6628E /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		728C78441BA46B5100A6628E /* TestObjectSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjectSubClass.h; sourceTree = "<group>"; };
@@ -58,6 +56,8 @@
 		728C784B1BA4733B00A6628E /* Sub_3_Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub_3_Class.m; sourceTree = "<group>"; };
 		728C784D1BA4734A00A6628E /* Sub_4_Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub_4_Class.h; sourceTree = "<group>"; };
 		728C784E1BA4734A00A6628E /* Sub_4_Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub_4_Class.m; sourceTree = "<group>"; };
+		728C78511BA53A4A00A6628E /* NSObject+AboutProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AboutProperty.h"; sourceTree = "<group>"; };
+		728C78521BA53A4A00A6628E /* NSObject+AboutProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AboutProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +99,7 @@
 		728C78171BA4680000A6628E /* ObjectPropertyTest */ = {
 			isa = PBXGroup;
 			children = (
+				728C78501BA53A4A00A6628E /* NSObject+AboutProperty */,
 				728C781C1BA4680000A6628E /* AppDelegate.h */,
 				728C781D1BA4680000A6628E /* AppDelegate.m */,
 				728C781F1BA4680000A6628E /* ViewController.h */,
@@ -113,8 +114,6 @@
 				728C784B1BA4733B00A6628E /* Sub_3_Class.m */,
 				728C784D1BA4734A00A6628E /* Sub_4_Class.h */,
 				728C784E1BA4734A00A6628E /* Sub_4_Class.m */,
-				728C783E1BA4682400A6628E /* NSObject+AboutProperty.h */,
-				728C783F1BA4682400A6628E /* NSObject+AboutProperty.m */,
 				728C78221BA4680000A6628E /* Main.storyboard */,
 				728C78251BA4680000A6628E /* Images.xcassets */,
 				728C78271BA4680000A6628E /* LaunchScreen.xib */,
@@ -147,6 +146,15 @@
 				728C78331BA4680000A6628E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		728C78501BA53A4A00A6628E /* NSObject+AboutProperty */ = {
+			isa = PBXGroup;
+			children = (
+				728C78511BA53A4A00A6628E /* NSObject+AboutProperty.h */,
+				728C78521BA53A4A00A6628E /* NSObject+AboutProperty.m */,
+			);
+			path = "NSObject+AboutProperty";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +261,10 @@
 				728C784C1BA4733B00A6628E /* Sub_3_Class.m in Sources */,
 				728C781E1BA4680000A6628E /* AppDelegate.m in Sources */,
 				728C78431BA46AE400A6628E /* TestObject.m in Sources */,
-				728C78401BA4682400A6628E /* NSObject+AboutProperty.m in Sources */,
 				728C78461BA46B5100A6628E /* TestObjectSubClass.m in Sources */,
 				728C781B1BA4680000A6628E /* main.m in Sources */,
 				728C784F1BA4734A00A6628E /* Sub_4_Class.m in Sources */,
+				728C78531BA53A4A00A6628E /* NSObject+AboutProperty.m in Sources */,
 				728C78491BA4732F00A6628E /* Sub_2_Class.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
